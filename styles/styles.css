@@ -1,0 +1,387 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:rgb(213, 214, 213);
+  border-radius: 5px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto";
+}
+
+.container-main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+.header {
+  padding: 16px;
+  background-color: rgb(244, 246, 247);
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  padding: 8px 10px;
+  background-color: rgb(16, 200, 40);
+  font-size: 16px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.content {
+  width: inherit;
+  padding: 20px;
+  margin-right: 0 !important;
+  display: grid;
+  grid-template-columns: 2.5fr 4.5fr 2fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.content > div > div {
+  box-shadow: 2px 2px 8px rgb(231, 229, 229), 
+              -2px -2px 8px rgb(231, 229, 229), 
+              2px -2px 8px rgb(231, 229, 229), 
+              -2px 2px 8px rgb(231, 229, 229);
+  padding: 20px 10px;
+  border-radius: 3px;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.products {
+  width: inherit;
+}
+
+.product-items {
+  padding: 6px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 10px;
+  overflow-y: auto;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid rgb(208, 203, 203);
+  text-align: left;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.product-item .title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.product-item .weight {
+  font-size: 16px;
+  color: green;
+  margin: 5px 0;
+}
+
+.product-item .cost {
+  font-size: 14px;
+  color: rgb(218, 20, 20);
+}
+
+.calculator > div {
+  height: auto;
+}
+
+.table-main {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.table-main tr th,
+.table-main tr td {
+  padding: 10px;
+}
+
+.table-main tr td input {
+  width: 60px;
+  border-color: rgb(224, 221, 221);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 3px;
+  font-size: 15px;
+}
+
+.table-main tr td .large-input {
+  width: 90px !important;
+}
+
+.total-weight-input {
+  border: none;
+  background-color: transparent;
+  width: 50px !important;
+}
+
+.table-main tr td a {
+  color:rgb(218, 20, 20)
+}
+
+.btn-delete {
+  background-color: rgb(230, 22, 22);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 0;
+}
+
+.check > div {
+  height: 490px;
+}
+
+.check > div > h3 {
+  border-bottom: 1px solid rgb(213, 211, 211);
+  padding-bottom: 20px;
+}
+
+.check-items > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 20px;
+  border-bottom: 1px solid rgb(213, 211, 211);
+}
+
+.check-items > div > span:first-child {
+  font-weight: 600;
+}
+
+.btn-pay {
+  background-color: rgb(8, 159, 61);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.mobile {
+  display: none;
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobile {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    background-color: rgb(16, 200, 40);
+    padding: 10px 25px;
+  }
+  
+  .mobile .mobile-icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(16, 200, 40);
+  }
+  
+  .mobile-icon svg {
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .active {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    transform: translateY(-30px) scale(1.5);
+  }
+
+  .calculator {
+    width: 96vw;
+  }
+
+  .items {
+    width: auto;
+    height: calc(100vh - 350px);
+    overflow: auto;
+  }
+
+  .product-items {
+    height: calc(100vh - 320px);
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+
+  .btn-delete {
+    margin-top: 20px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator {
+    display: none;
+  }
+
+  .check {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    background-color: rgb(16, 200, 40);
+    padding: 5px 25px;
+  }
+  
+  .mobile .mobile-icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(16, 200, 40);
+  }
+  
+  .mobile-icon svg {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .active {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    transform: translateY(-30px) scale(1.5);
+  }
+
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+    top: 60px;
+    right: 16px;
+    transform: translateY(-120%);
+    transition: .5s;
+  }
+
+  .icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .icons svg {
+    font-size: 18px;
+  }
+
+  .to-top {
+    transform: translateY(0);
+  }
+
+  .burger-icon svg {
+    font-size: 24px;
+  }
+
+  .header {
+    font-size: 20px;
+    align-items: center;
+  }
+
+  .calculator {
+    width: 94vw;
+    display: none;
+  }
+
+  .items {
+    width: auto;
+    height: calc(100vh - 350px);
+    overflow: auto;
+  }
+
+  .product-items {
+    height: calc(100vh - 320px);
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  .btn-delete {
+    margin-top: 20px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .check {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-items {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+
+  .calculator {
+    width: 91vw;
+  }
+}
