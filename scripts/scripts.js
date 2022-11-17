@@ -16,11 +16,7 @@ productItem.forEach((item, id) => {
     addData = `
       <tr>
         <td>${title.innerHTML}</td>
-        <td><input type="number" value="0" min="0" onchange="onChange(1)" /></td>
-        <td><input type="number" value="0" min="0" onchange="onChange(2)" /></td>
-        <td><input type="number" value="0" min="0" onchange="onChange(4)" /></td>
         <td><input type="number" value="1" min="0" onchange="onChange(0.1)" /></td>
-        <td><input type="number" class="total-weight-input" value="1" disabled></td>
         <td><input type="number" class="large-input" value=${cost.innerHTML} /></td>
         <td><input type="number" class="large-input" value=${cost.innerHTML} disabled /></td>
         <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
