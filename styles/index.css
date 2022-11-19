@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background:rgb(213, 214, 213);
+  background: rgb(213, 214, 213);
   border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ a:hover {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .header {
@@ -49,10 +49,14 @@ h3 {
   justify-content: space-between;
 }
 
+.welcome {
+  font-size: 20px;
+}
+
 .icon {
   padding: 8px 10px;
   background-color: rgb(16, 200, 40);
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 3px;
   margin-left: 5px;
 }
@@ -67,11 +71,13 @@ h3 {
   text-align: center;
 }
 
+select > option {
+  font-size: 18px;
+}
+
 .content > div > div {
-  box-shadow: 2px 2px 8px rgb(231, 229, 229), 
-              -2px -2px 8px rgb(231, 229, 229), 
-              2px -2px 8px rgb(231, 229, 229), 
-              -2px 2px 8px rgb(231, 229, 229);
+  box-shadow: 2px 2px 8px rgb(231, 229, 229), -2px -2px 8px rgb(231, 229, 229),
+    2px -2px 8px rgb(231, 229, 229), -2px 2px 8px rgb(231, 229, 229);
   padding: 20px 10px;
   border-radius: 3px;
 }
@@ -102,21 +108,19 @@ h3 {
   border-radius: 3px;
   padding: 5px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .product-item .title {
   font-weight: 600;
-  font-size: 15px;
 }
 
 .product-item .weight {
-  font-size: 16px;
   color: green;
   margin: 5px 0;
 }
 
 .product-item .cost {
-  font-size: 14px;
   color: rgb(218, 20, 20);
 }
 
@@ -132,6 +136,7 @@ h3 {
 .table-main tr th,
 .table-main tr td {
   padding: 10px;
+  font-size: 18px;
 }
 
 .table-main tr td input {
@@ -140,11 +145,11 @@ h3 {
   border-radius: 5px;
   outline: none;
   padding-left: 3px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .table-main tr td .large-input {
-  width: 90px !important;
+  width: 120px !important;
 }
 
 .total-weight-input {
@@ -154,7 +159,7 @@ h3 {
 }
 
 .table-main tr td a {
-  color:rgb(218, 20, 20)
+  color: rgb(218, 20, 20);
 }
 
 .btn-delete {
@@ -170,6 +175,7 @@ h3 {
 
 .check > div {
   height: 490px;
+  font-size: 18px;
 }
 
 .check > div > h3 {
@@ -217,7 +223,7 @@ h3 {
     background-color: rgb(16, 200, 40);
     padding: 10px 25px;
   }
-  
+
   .mobile .mobile-icon {
     width: 50px;
     height: 50px;
@@ -228,12 +234,12 @@ h3 {
     cursor: pointer;
     background-color: rgb(16, 200, 40);
   }
-  
+
   .mobile-icon svg {
     font-size: 30px;
     color: #fff;
   }
-  
+
   .active {
     border: 4px solid #fff;
     border-radius: 50%;
@@ -282,7 +288,7 @@ h3 {
     background-color: rgb(16, 200, 40);
     padding: 5px 25px;
   }
-  
+
   .mobile .mobile-icon {
     width: 50px;
     height: 50px;
@@ -293,12 +299,12 @@ h3 {
     cursor: pointer;
     background-color: rgb(16, 200, 40);
   }
-  
+
   .mobile-icon svg {
     font-size: 24px;
     color: #fff;
   }
-  
+
   .active {
     border: 4px solid #fff;
     border-radius: 50%;
@@ -311,7 +317,7 @@ h3 {
     color: #fff;
     position: relative;
   }
-  
+
   .icons {
     display: flex;
     flex-direction: column;
@@ -320,7 +326,7 @@ h3 {
     top: 60px;
     right: 16px;
     transform: translateY(-120%);
-    transition: .5s;
+    transition: 0.5s;
   }
 
   .icons a {
