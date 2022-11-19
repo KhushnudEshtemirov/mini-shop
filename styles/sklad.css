@@ -110,7 +110,7 @@ table tr th {
   border-radius: 50%;
   background-color: #00a896;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 99999999;
 }
 
 .plus-icon svg {
