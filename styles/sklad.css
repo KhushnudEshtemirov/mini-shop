@@ -28,6 +28,15 @@ body {
   overflow-x: hidden !important;
 }
 
+table {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+table tr th {
+  text-align: center !important;
+}
+
 .top-menu {
   display: flex;
   justify-content: space-between;
@@ -76,6 +85,11 @@ body {
   cursor: pointer;
 }
 
+.pages {
+  width: 94%;
+  margin: 0 auto;
+}
+
 .pages > div:first-child {
   display: block;
 }
@@ -85,18 +99,18 @@ body {
 }
 
 .plus-icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
   border-radius: 50%;
   background-color: #00a896;
   cursor: pointer;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .plus-icon svg {
@@ -104,15 +118,15 @@ body {
   color: #fff;
 }
 
-.modal-oyna {
+.modal-window {
   width: 80vw;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
-  z-index: 99;
-  transform: translateX(100%);
+  z-index: 9999;
+  transform: translateX(-100%);
   transition: 0.5s ease-in-out;
 }
 
@@ -123,13 +137,48 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.356);
-  z-index: 90;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+form label {
+  font-size: 1.25em !important;
+}
+
+form input {
+  font-size: 1.1em !important;
+}
+
+select[name="select"] {
+  font-size: 1.1em;
+}
+
+input[name="cost"] {
+  display: inline;
+  width: 68%;
+}
+
+#currency {
+  display: inline;
+  width: 30%;
+}
+
+button[class="btn btn-primary"] {
+  font-size: 1.2em;
+}
+
+.pagination .paginate_button a {
+  font-size: 1.2em !important;
 }
 
 .show {
   transform: translateX(0) !important;
 }  
+
+.overflow {
+  height: 85vh;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 1380px) {
   .top-menu ul {
@@ -164,7 +213,7 @@ body {
     transform: translateX(-120%);
     transition: 0.5s;
     border-radius: 5px;
-    z-index: 80;
+    z-index: 99;
   }
 
   .top-menu .menu-items .menu-item {
@@ -180,12 +229,23 @@ body {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .modal-window {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
   .top-menu .icons svg {
     margin: 0 12px;
   }
 
-  .modal-oyna {
+  .pages {
     width: 100%;
   }
 }

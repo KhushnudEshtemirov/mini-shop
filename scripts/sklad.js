@@ -26,6 +26,7 @@ barIcon.addEventListener("click", () => {
 });
 
 $(".plus-icon").click(() => {
-  $(".modal-oyna").toggleClass("show");
+  $(".modal-window").toggleClass("show");
   $(".pages").toggleClass("bgBefore");
+  $(".products").toggleClass("overflow");
 });
