@@ -26,6 +26,7 @@ barIcon.addEventListener("click", () => {
 });
 
 $(".plus-icon").click(() => {
+  $(".plus-icon").toggleClass("rotate");
   $(".modal-window").toggleClass("show");
   $(".pages").toggleClass("bgBefore");
   $(".products").toggleClass("overflow");
