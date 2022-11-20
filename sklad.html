@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css" />
     <link rel="stylesheet" href="styles/sklad.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,10 +36,16 @@
               <li class="menu-item">Tovarni qaytarish</li>
             </ul>
             <div class="icons">
-              <i class="fa-solid fa-calculator"></i>
-              <i class="fa-solid fa-bell"></i>
-              <i class="fa-solid fa-comment"></i>
-              <i class="fa-solid fa-right-from-bracket"></i>
+              <a href="#" class="calc-icon"
+                ><i class="fa-solid fa-calculator"></i
+              ></a>
+              <a href="#" class="bell-icon"><i class="fa-solid fa-bell"></i></a>
+              <a href="#" class="comment-icon"
+                ><i class="fa-solid fa-comment"></i
+              ></a>
+              <a href="#" class="bracket-icon"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></a>
             </div>
           </div>
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pages">
@@ -639,6 +646,77 @@
               </div>
             </form>
           </div>
+          <div class="row">
+            <div class="calculator-body">
+              <div class="calculator">
+                <input
+                  type="text"
+                  name="screen"
+                  id="answer"
+                  class="input-calculator"
+                  readonly
+                />
+                <table class="table-calculator">
+                  <tr>
+                    <td><button class="btn-calculator">(</button></td>
+                    <td><button class="btn-calculator">)</button></td>
+                    <td>
+                      <button
+                        class="btn-calculator"
+                        style="
+                          background-color: #f01600;
+                          font-weight: bold;
+                          color: #ecf0f1;
+                        "
+                      >
+                        C
+                      </button>
+                    </td>
+                    <td><button class="btn-calculator">%</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator">7</button></td>
+                    <td><button class="btn-calculator">8</button></td>
+                    <td><button class="btn-calculator">9</button></td>
+                    <td><button class="btn-calculator">X</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator">4</button></td>
+                    <td><button class="btn-calculator">5</button></td>
+                    <td><button class="btn-calculator">6</button></td>
+                    <td><button class="btn-calculator">-</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator">1</button></td>
+                    <td><button class="btn-calculator">2</button></td>
+                    <td><button class="btn-calculator">3</button></td>
+                    <td><button class="btn-calculator">+</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator">0</button></td>
+                    <td>
+                      <button class="btn-calculator" style="font-weight: bold">
+                        .
+                      </button>
+                    </td>
+                    <td><button class="btn-calculator">/</button></td>
+                    <td>
+                      <button
+                        class="btn-calculator"
+                        style="
+                          background-color: #25db72;
+                          font-weight: bold;
+                          color: #ecf0f1;
+                        "
+                      >
+                        =
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -648,6 +726,7 @@
     <script src="DataTables/js/jquery.dataTables.min.js"></script>
     <script src="DataTables/js/dataTables.bootstrap5.min.js"></script>
     <script src="scripts/sklad.js"></script>
+    <script src="scripts/calc.js"></script>
     <script>
       $(document).ready(function () {
         $("#example").DataTable();

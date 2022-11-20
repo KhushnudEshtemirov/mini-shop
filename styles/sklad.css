@@ -19,18 +19,25 @@
   border-radius: 5px;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   width: 100%;
   height: auto;
   font-family: "Roboto";
   padding: 10px 20px;
-  font-size: 16px;
   overflow-x: hidden !important;
+}
+
+.icons > a {
+  color: #fff;
 }
 
 table {
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 table tr th {
@@ -45,7 +52,7 @@ table tr th {
   background-color: #00a896;
   color: #fff;
   border-radius: 10px;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 .top-menu ul {
@@ -151,15 +158,15 @@ table tr th {
 }
 
 form label {
-  font-size: 1.25em !important;
+  font-size: 1.25rem !important;
 }
 
 form input {
-  font-size: 1.1em !important;
+  font-size: 1.1rem !important;
 }
 
 select[name="select"] {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 input[name="cost"] {
@@ -173,11 +180,11 @@ input[name="cost"] {
 }
 
 button[class="btn btn-primary"] {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .pagination .paginate_button a {
-  font-size: 1.2em !important;
+  font-size: 1.2rem !important;
 }
 
 .show {
@@ -250,8 +257,11 @@ button[class="btn btn-primary"] {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  html {
     font-size: 14px;
+  }
+
+  body {
     padding: 0 !important;
   }
 

@@ -31,3 +31,7 @@ $(".plus-icon").click(() => {
   $(".pages").toggleClass("bgBefore");
   $(".products").toggleClass("overflow");
 });
+
+$(".calc-icon").click(() => {
+  $(".calculator-body").toggleClass("show_calc");
+});
