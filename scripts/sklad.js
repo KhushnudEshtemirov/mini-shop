@@ -28,10 +28,22 @@ barIcon.addEventListener("click", () => {
 $(".plus-icon").click(() => {
   $(".plus-icon").toggleClass("rotate");
   $(".modal-window").toggleClass("show");
-  $(".pages").toggleClass("bgBefore");
   $(".products").toggleClass("overflow");
 });
 
 $(".calc-icon").click(() => {
   $(".calculator-body").toggleClass("show_calc");
+  $(".black-window").show();
+});
+
+$(".black-window").click(() => {
+  $(".calculator-body").toggleClass("show_calc");
+  $(".black-window").hide();
+});
+
+let audio = new Audio();
+audio.src = "./src/music.mp3";
+
+$(".bell-icon").click(() => {
+  audio.play();
 });

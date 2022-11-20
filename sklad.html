@@ -22,6 +22,7 @@
     <title>Sklad</title>
   </head>
   <body>
+    <div class="black-window"></div>
     <div class="container-fluid">
       <div class="header">
         <div class="row">
@@ -33,7 +34,7 @@
               <li class="menu-item">Hisobot</li>
               <li class="menu-item">Harajatlar</li>
               <li class="menu-item">Qaytarilgan tovarlar</li>
-              <li class="menu-item">Tovarni qaytarish</li>
+              <li class="menu-item">Valyuta kursi</li>
             </ul>
             <div class="icons">
               <a href="#" class="calc-icon"
@@ -658,11 +659,11 @@
                 />
                 <table class="table-calculator">
                   <tr>
-                    <td><button class="btn-calculator">(</button></td>
-                    <td><button class="btn-calculator">)</button></td>
+                    <td><button class="btn-calculator same-btn">(</button></td>
+                    <td><button class="btn-calculator same-btn">)</button></td>
                     <td>
                       <button
-                        class="btn-calculator"
+                        class="btn-calculator same-btn"
                         style="
                           background-color: #f01600;
                           font-weight: bold;
@@ -672,37 +673,44 @@
                         C
                       </button>
                     </td>
-                    <td><button class="btn-calculator">%</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="btn-calculator">7</button></td>
-                    <td><button class="btn-calculator">8</button></td>
-                    <td><button class="btn-calculator">9</button></td>
-                    <td><button class="btn-calculator">X</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="btn-calculator">4</button></td>
-                    <td><button class="btn-calculator">5</button></td>
-                    <td><button class="btn-calculator">6</button></td>
-                    <td><button class="btn-calculator">-</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="btn-calculator">1</button></td>
-                    <td><button class="btn-calculator">2</button></td>
-                    <td><button class="btn-calculator">3</button></td>
-                    <td><button class="btn-calculator">+</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="btn-calculator">0</button></td>
                     <td>
-                      <button class="btn-calculator" style="font-weight: bold">
+                      <button class="btn-calculator backspace">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator same-btn">7</button></td>
+                    <td><button class="btn-calculator same-btn">8</button></td>
+                    <td><button class="btn-calculator same-btn">9</button></td>
+                    <td><button class="btn-calculator same-btn">X</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator same-btn">4</button></td>
+                    <td><button class="btn-calculator same-btn">5</button></td>
+                    <td><button class="btn-calculator same-btn">6</button></td>
+                    <td><button class="btn-calculator same-btn">-</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator same-btn">1</button></td>
+                    <td><button class="btn-calculator same-btn">2</button></td>
+                    <td><button class="btn-calculator same-btn">3</button></td>
+                    <td><button class="btn-calculator same-btn">+</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn-calculator same-btn">0</button></td>
+                    <td>
+                      <button
+                        class="btn-calculator same-btn"
+                        style="font-weight: bold"
+                      >
                         .
                       </button>
                     </td>
-                    <td><button class="btn-calculator">/</button></td>
+                    <td><button class="btn-calculator same-btn">/</button></td>
                     <td>
                       <button
-                        class="btn-calculator"
+                        class="btn-calculator same-btn"
                         style="
                           background-color: #25db72;
                           font-weight: bold;

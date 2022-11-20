@@ -1,6 +1,6 @@
 document.getElementById("answer").readOnly = true; //set this attribute in Html file
 let screen = document.getElementById("answer");
-buttons = document.querySelectorAll("button");
+buttons = document.querySelectorAll(".same-btn");
 let screenValue = "";
 for (item of buttons) {
   item.addEventListener("click", (e) => {
@@ -21,13 +21,16 @@ for (item of buttons) {
   });
 }
 
+$(".backspace").click(() => {
+  screenValue = screenValue.slice(0, -1);
+  screen.value = screenValue;
+});
+
 document.addEventListener("keydown", function (event) {
   if (event.shiftKey == 57) {
     event.key = "(";
   } else if (event.shiftKey == 48) {
     event.key = ")";
-  } else if (event.shiftKey == 53) {
-    event.key = "%";
   }
   if (event.keyCode == 88) {
     screenValue += "*";
@@ -40,7 +43,6 @@ document.addEventListener("keydown", function (event) {
     event.key == "*" ||
     event.key == "." ||
     event.key == "/" ||
-    event.key == "%" ||
     event.key == "(" ||
     event.key == ")"
   ) {
