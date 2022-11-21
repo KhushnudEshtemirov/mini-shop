@@ -155,7 +155,7 @@ table tr th {
 }
 
 .modal-window {
-  width: 100vw;
+  width: 80vw;
   height: 100%;
   background-color: #fff;
   position: absolute;
@@ -275,6 +275,10 @@ button[class="btn btn-primary"] {
   transform: translateX(0) !important;
 }  
 
+.show-black {
+  display: block;
+}
+
 .overflow {
   height: 100vh;
   overflow: hidden;
@@ -340,6 +344,7 @@ button[class="btn btn-primary"] {
 
 @media screen and (max-width: 992px) {
   .modal-window {
+    width: 100%;
     height: 100vh;
   }
 }
