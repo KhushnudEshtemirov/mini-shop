@@ -135,7 +135,7 @@ table tr th {
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 20px;
+  right: 30px;
   bottom: 0;
   border-radius: 50%;
   background-color: #00a896;
@@ -271,7 +271,7 @@ button[class="btn btn-primary"] {
   font-size: 1.2rem;
 }
 
-.show {
+.show-sklad {
   transform: translateX(0) !important;
 }  
 
@@ -290,9 +290,15 @@ button[class="btn btn-primary"] {
 }
 
 @media screen and (max-width: 1400px) {
-  .top-menu ul {
-    justify-content: space-between;
-    padding: 0 10px;
+  body {
+    padding: 0 !important;
+  }
+
+  .top-menu {
+    z-index: 99;
+    position: fixed;
+    border-radius: 0;
+    left: 0;
   }
 
   .mobile-version {
@@ -311,8 +317,10 @@ button[class="btn btn-primary"] {
   }
 
   .top-menu .menu-items {
-    top: 75px;
-    left: 32px;
+    justify-content: space-between;
+    padding: 0 10px;
+    top: 65px;
+    left: 14px;
     position: absolute;
     height: auto;
     display: flex;
@@ -323,6 +331,10 @@ button[class="btn btn-primary"] {
     transition: 0.5s;
     border-radius: 5px;
     z-index: 99;
+  }
+
+  .pages {
+    margin-top: 50px;
   }
 
   .top-menu .menu-items .menu-item {

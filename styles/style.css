@@ -13,6 +13,39 @@
   transition: 0.5s ease-in-out;
 }
 
+.loader {
+  width : 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 999;
+}
+
+.loader::after, 
+.loader::before {
+  content: '';
+  width : 50px;
+  height: 50px;
+  border:4px solid rgb(246, 255, 0);
+  position: absolute;
+  animation: rotation 2s ease-in-out infinite alternate;
+}
+
+.loader::after {
+  border-color: #009011;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+
 .show_calc {
   transform: scale(1);
 }
@@ -70,6 +103,264 @@ button.btn-calculator:active {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+/*========================== Login ==========================*/
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.scale-part {
+  width: 30vw;
+  height: 400px;
+  perspective: 1000px;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.rotate-part {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px 20px;
+  border-radius: 8px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.rotate-part > div:first-child {
+  backface-visibility: hidden;
+  z-index: 10;
+}
+
+.rotate-part > div:last-child {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.logo-container {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.logo-container img {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-container label {
+  margin-bottom: 10px;
+  color: rgb(145, 145, 145);
+  user-select: none;
+}
+
+.login-container form div {
+  position: relative;
+}
+
+.login-container form div label {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+}
+
+.login-container form input:focus ~ label,
+.login-container form input:valid ~ label {
+  top: -35px;
+  font-weight: 600;
+  color: rgb(40, 40, 40);
+  font-size: 18px;
+}
+
+form div:last-child p {
+  display: inline;
+}
+
+form div:last-child p:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+form div svg {
+  top: 11px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  display: none !important;
+  color: rgb(85, 85, 85);
+}
+
+form div button[class="button"] {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+}
+
+.show {
+  display: block !important;
+}
+
+/*================================= Worker ==================================*/
+
+.product-list {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.product-list .product-cart {
+  height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.product-window {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.product-list .product-cart:hover .cart-container .information-body {
+  opacity: 1;
+}
+
+.product-list .product-cart:hover .cart-container .product-window {
+  opacity: 1;
+}
+
+.product-list .product-cart .cart-container {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  /* border: 1px solid rgb(255, 0, 0); */
+  transition: 0.2s;
+}
+
+.product-list .product-cart .cart-container .image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list .product-cart .cart-container .image-container img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.product-list .product-cart .cart-container .information-body {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.product-cost {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+.add-btn button {
+  padding: 10px;
+  font-size: 0.9rem;
+  border-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.524);
+  color: #ffffff;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.add-btn button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.selected-products {
+  border-radius: 8px;
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+
+}
+
+.table-main {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.table-main tr th,
+.table-main tr td {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.table-main tr td input {
+  width: 100px;
+  border-color: rgb(224, 221, 221);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 3px;
+  font-size: 18px;
+}
+
+.table-main tr td .large-input {
+  width: 140px !important;
+}
+
+.table-main tr td a {
+  color: rgb(218, 20, 20);
+}
+
 @media screen and (max-width: 992px) {
   .calculator-body {
     font-size: 14px;
@@ -77,5 +368,9 @@ button.btn-calculator:active {
 
   .table-calculator {
     font-size: 16px;
+  }
+
+  .scale-part {
+    width: 80vw;
   }
 }

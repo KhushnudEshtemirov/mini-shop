@@ -1,4 +1,4 @@
-document.getElementById("answer").readOnly = true; //set this attribute in Html file
+document.getElementById("answer").readOnly = true;
 let screen = document.getElementById("answer");
 buttons = document.querySelectorAll(".same-btn");
 let screenValue = "";
@@ -13,7 +13,7 @@ for (item of buttons) {
       screenValue = "";
       screen.value = screenValue;
     } else if (buttonText == "=") {
-      checkForBracketMulti(); // automatically evaluates if no brackets
+      checkForBracketMulti();
     } else {
       screenValue += buttonText;
       screen.value = screenValue;
@@ -50,7 +50,7 @@ document.addEventListener("keydown", function (event) {
     screen.value = screenValue;
   }
   if (event.keyCode == 13 || event.keyCode == 187) {
-    checkForBracketMulti(); // automatically evaluates if no brackets
+    checkForBracketMulti();
   } else if (event.keyCode == 46) {
     screenValue = "";
     screen.value = screenValue;
@@ -62,8 +62,6 @@ document.addEventListener("keydown", function (event) {
     screenValue = "";
     screen.value = screenValue;
     console.clear();
-  } else if (event.keyCode == 82) {
-    location.reload();
   }
 });
 

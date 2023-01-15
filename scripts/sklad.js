@@ -1,6 +1,6 @@
 const menuItem = document.querySelectorAll(".menu-item");
 const menuItems = document.querySelector(".menu-items");
-const pages = document.querySelector(".pages").querySelectorAll("div");
+const pages = document.querySelector(".pages").querySelectorAll(".tab");
 const barIcon = document.querySelector(".mobile-version");
 
 menuItem.forEach((item, id) => {
@@ -17,21 +17,21 @@ menuItem.forEach((item, id) => {
       }
     }
 
-    menuItems.classList.toggle("show");
+    menuItems.classList.toggle("show-sklad");
   });
 });
 
 barIcon.addEventListener("click", () => {
-  menuItems.classList.toggle("show");
+  menuItems.classList.toggle("show-sklad");
 });
 
 $(".plus-icon").click(() => {
   $(".plus-icon").hasClass("rotate")
     ? $(".plus-icon").removeClass("rotate")
     : $(".plus-icon").addClass("rotate");
-  $(".modal-window").hasClass("show")
-    ? $(".modal-window").removeClass("show")
-    : $(".modal-window").addClass("show");
+  $(".modal-window").hasClass("show-sklad")
+    ? $(".modal-window").removeClass("show-sklad")
+    : $(".modal-window").addClass("show-sklad");
   $(".black-window").hasClass("show-black")
     ? $(".black-window").removeClass("show-black")
     : $(".black-window").addClass("show-black");
@@ -51,10 +51,10 @@ $(".black-window").click(() => {
     ? $(".plus-icon").removeClass("rotate")
     : null;
   $(".calculator-body").removeClass("show_calc");
-  $(".bell-modal").removeClass("show");
-  $(".comment-modal").removeClass("show");
-  $(".modal-window").hasClass("show")
-    ? $(".modal-window").removeClass("show")
+  $(".bell-modal").removeClass("show-sklad");
+  $(".comment-modal").removeClass("show-sklad");
+  $(".modal-window").hasClass("show-sklad")
+    ? $(".modal-window").removeClass("show-sklad")
     : null;
   $(".black-window").removeClass("show-black");
   $("body").removeClass("overflow");
@@ -65,14 +65,14 @@ audio.src = "./src/music.mp3";
 
 $(".bell-icon").click(() => {
   audio.play();
-  $(".bell-modal").addClass("show");
+  $(".bell-modal").addClass("show-sklad");
   $(".black-window").addClass("show-black");
   $("body").addClass("overflow");
 });
 
 $(".comment-icon").click(() => {
   audio.play();
-  $(".comment-modal").addClass("show");
+  $(".comment-modal").addClass("show-sklad");
   $(".black-window").addClass("show-black");
   $("body").addClass("overflow");
 });
