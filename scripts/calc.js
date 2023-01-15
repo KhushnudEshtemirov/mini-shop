@@ -61,7 +61,6 @@ document.addEventListener("keydown", function (event) {
   } else if (event.keyCode == 67) {
     screenValue = "";
     screen.value = screenValue;
-    console.clear();
   }
 });
 
