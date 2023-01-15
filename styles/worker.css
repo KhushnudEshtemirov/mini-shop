@@ -32,4 +32,8 @@ body {
   .modal-window1 {
     width: 90vw;
   }
+
+  .row {
+    margin: 0 !important;
+  }
 }
